@@ -1,0 +1,11 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: slack
+  namespace: kubestronaut-predictor
+spec:
+  channel: kubestronaut-predictor
+  secretRef:
+    name: slack-url
+  type: slack

@@ -1,0 +1,20 @@
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  labels:
+    kustomize.toolkit.fluxcd.io/name: kubestronaut-predictor
+    kustomize.toolkit.fluxcd.io/namespace: kubestronaut-predictor
+  name: slack-notif
+  namespace: kubestronaut-predictor
+spec:
+  eventSeverity: info
+  eventSources:
+  - kind: Kustomization
+    name: '*'
+  - kind: GitRepository
+    name: '*'
+  - kind: HelmRelease
+    name: '*'
+  providerRef:
+    name: slack

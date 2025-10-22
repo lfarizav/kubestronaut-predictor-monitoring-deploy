@@ -1,0 +1,12 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: github-kubestronaut-predictor
+  namespace: kubestronaut-predictor
+spec:
+  eventSeverity: info
+  eventSources:
+  - kind: HelmRelease
+    name: kubestronaut-predictor
+  providerRef:
+    name: github-kubestronaut-predictor
