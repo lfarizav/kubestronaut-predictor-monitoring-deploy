@@ -10,6 +10,6 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: GitRepository
-        name: keda-deploy
+        name: monitoring-deploy
       version: '*'
   interval: 10m0s
