@@ -1,7 +1,7 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Alert
 metadata:
-  name: github-keda
+  name: monitoring-deploy
   namespace: monitoring
 spec:
   eventSeverity: info
@@ -9,4 +9,4 @@ spec:
   - kind: HelmRelease
     name: keda
   providerRef:
-    name: github-keda
+    name: monitoring-deploy
