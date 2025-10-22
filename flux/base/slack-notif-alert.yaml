@@ -6,7 +6,7 @@ metadata:
     kustomize.toolkit.fluxcd.io/name: kubestronaut-predictor
     kustomize.toolkit.fluxcd.io/namespace: kubestronaut-predictor
   name: slack-notif
-  namespace: kubestronaut-predictor
+  namespace: monitoring
 spec:
   eventSeverity: info
   eventSources:

@@ -1,22 +1,6 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: k8s
-  namespace: kubestronaut-predictor
-spec:
-  chart:
-    spec:
-      chart: ./helm/charts/kubestronaut-predictor
-      reconcileStrategy: ChartVersion
-      sourceRef:
-        kind: GitRepository
-        name: kubestronaut-predictor-deploy
-      version: '*'
-  interval: 10m0s
----
-apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
   name: prom
   namespace: monitoring
 spec:
@@ -27,5 +11,21 @@ spec:
       sourceRef:
         kind: GitRepository
         name: monitoring-deploy
+      version: '*'
+  interval: 10m0s
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: keda
+  namespace: monitoring
+spec:
+  chart:
+    spec:
+      chart: ./helm/charts/keda
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: GitRepository
+        name: keda-deploy
       version: '*'
   interval: 10m0s
