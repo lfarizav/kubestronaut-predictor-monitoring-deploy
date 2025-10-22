@@ -1,7 +1,7 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Alert
 metadata:
-  name: monitoring-deploy
+  name: keda-deploy
   namespace: monitoring
 spec:
   eventSeverity: info
