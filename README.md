@@ -1,0 +1,1 @@
+# kubestronaut-predictor-monitoring-deploy
