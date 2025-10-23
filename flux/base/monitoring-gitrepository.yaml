@@ -7,7 +7,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  secretRef:
-    name: github-credentials #k8s-open5gs
+#  secretRef:
+#    name: github-credentials #k8s-open5gs
   timeout: 1m0s
   url: https://github.com/lfarizav/kubestronaut-predictor-monitoring-deploy.git
